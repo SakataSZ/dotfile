@@ -8,6 +8,9 @@
 # Update and upgrade
 yes | sudo apt update && sudo apt upgrade
 
+# Install upzip
+sudo apt install unzip
+
 # Install Vim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
@@ -41,6 +44,21 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 # Install python
 pyenv install 3.11.4
 pyenv global 3.11.4
+
+# Install volta
+curl https://get.volta.sh | bash
+
+# Install node
+volta install node
+
+# Install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Install rustup components
+rustup component add clippy rls rust-analysis rust-src rust-docs rustfmt rust-analyzer
+
+# Install ripgrep
+cargo install ripgrep
 
 # Install fzf
 sudo apt install fzf
